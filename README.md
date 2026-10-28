@@ -89,7 +89,7 @@ Pregunta → Recuperación → Crítico evalúa contexto →
 
 ---
 
-## 🦙 Modelo de lenguaje: Ollama + llama.cpp
+## Modelo de lenguaje: Ollama + llama.cpp
 
 EvidenciaLocal **no incluye pesos de modelo**. Usa **Ollama** como servidor de inferencia local, que a su vez ejecuta modelos **GGUF** mediante **llama.cpp**.
 
