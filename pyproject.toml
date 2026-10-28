@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evidencialocal"
+version = "0.1.0"
+description = "Sistema RAG educativo local con modos baseline y correctivo comparables"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "Carlos", email = "carlos@example.com"}
+]
+keywords = ["rag", "education", "local-llm", "embeddings", "chroma", "llama-cpp"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "pydantic>=2.8.0",
+    "pydantic-settings>=2.3.0",
+    "sentence-transformers>=3.0.0",
+    "chromadb>=0.5.0",
+    "pypdf>=4.0.0",
+    "streamlit>=1.35.0",
+    "typer[all]>=0.12.0",
+    "pytest>=8.2.0",
+    "pytest-mock>=3.12.0",
+    "httpx>=0.27.0",
+    "llama-cpp-python>=0.3.0",
+    "numpy>=1.26.0",
+    "torch>=2.3.0",
+    "transformers>=4.41.0",
+    "accelerate>=0.30.0",
+    "pyyaml>=6.0.1",
+    "tqdm>=4.66.0",
+    "rich>=13.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.5.0",
+    "mypy>=1.10.0",
+    "pre-commit>=3.7.0",
+]
+
+[project.scripts]
+evidencialocal = "evidencialocal.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["evidencialocal*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E", "F", "I", "N", "W", "UP", "B", "C4", "T20"]
+ignore = ["E501", "B008"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = true
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+strict = false

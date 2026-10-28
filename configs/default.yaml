@@ -1,0 +1,60 @@
+# Configuración por defecto para EvidenciaLocal
+# Copie este archivo y modifique según necesidades
+
+embedding:
+  model_name: "intfloat/multilingual-e5-small"
+  dimension: 384
+  batch_size: 32
+  normalize: true
+  query_prefix: "query: "
+  passage_prefix: "passage: "
+  device: "auto"  # auto, cpu, cuda, mps
+
+chroma:
+  persist_directory: "data/chroma"
+  collection_name: "evidencialocal"
+  distance_metric: "cosine"  # cosine, l2, ip
+
+sqlite:
+  database_path: "data/sqlite/metadata.db"
+  enable_wal: true
+
+llama_cpp:
+  model_path: "qwen2.5-3b-instruct-q4_k_m.gguf"
+  n_ctx: 4096
+  n_threads: 4
+  n_batch: 512
+  temperature: 0.1
+  top_p: 0.9
+  max_tokens: 2048
+
+indexing:
+  chunk_size: 512
+  chunk_overlap: 50
+  min_chunk_size: 100
+  tokenizer_model: "intfloat/multilingual-e5-small"
+
+retrieval:
+  top_k: 5
+  max_retrievals: 3
+  score_threshold: 0.0
+
+corrective:
+  max_retries: 2
+  critique_temperature: 0.0
+
+evaluation:
+  random_seed: 42
+  bootstrap_samples: 1000
+  confidence_level: 0.95
+
+# Directorios
+data_dir: "data"
+raw_data_dir: "data/raw"
+processed_data_dir: "data/processed"
+config_dir: "configs"
+experiments_dir: "experiments/results"
+
+# Logging
+log_level: "INFO"
+log_file: "logs/evidencialocal.log"

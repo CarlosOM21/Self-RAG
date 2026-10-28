@@ -1,0 +1,8 @@
+{"id": "q1", "question": "¿Qué es el aprendizaje supervisado?", "gold_answer": "Es un paradigma de aprendizaje automático donde el algoritmo aprende a partir de datos etiquetados, mapeando entradas a salidas esperadas."}
+{"id": "q2", "question": "¿Cuáles son los principales tipos de aprendizaje supervisado?", "gold_answer": "Clasificación (salida categórica) y regresión (salida continua)."}
+{"id": "q3", "question": "¿Qué es el overfitting y cómo se previene?", "gold_answer": "Overfitting es cuando el modelo memoriza datos de entrenamiento en lugar de generalizar. Se previene con validación cruzada, regularización, early stopping, dropout."}
+{"id": "q4", "question": "¿Cómo funcionan las redes neuronales?", "gold_answer": "Son modelos con neuronas artificiales en capas (entrada, ocultas, salida) que aplican transformación lineal + activación no lineal. Se entrenan con backpropagation y gradient descent."}
+{"id": "q5", "question": "¿Qué es el aprendizaje no supervisado?", "gold_answer": "Encuentra patrones en datos sin etiquetas. Tareas: clustering, reducción de dimensionalidad, detección de anomalías."}
+{"id": "q6", "question": "¿Para qué sirve PCA?", "gold_answer": "Reducción de dimensionalidad proyectando datos a subespacio de menor dimensión maximizando varianza explicada."}
+{"id": "q7", "question": "¿Qué métricas se usan para evaluar clasificación?", "gold_answer": "Accuracy, precision, recall, F1-score, AUC-ROC, matriz de confusión."}
+{"id": "q8", "question": "¿Qué es data leakage?", "gold_answer": "Fuga de información del conjunto de test/validation al entrenamiento, inflando métricas artificialmente."}
