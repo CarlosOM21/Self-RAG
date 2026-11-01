@@ -243,7 +243,6 @@ Los tests usan dobles para los modelos pesados e incluyen regresiones del bucle 
 ## Limitaciones deliberadas
 
 - No hay OCR para PDFs escaneados.
-- No se generan PDFs ni corpus sintéticos desde la aplicación.
 - No se usa Ollama ni un servidor HTTP para el LLM: la inferencia es directa con llama.cpp.
 - La similitud coseno ordena candidatos, pero no demuestra relevancia ni factualidad.
 - Las citas validan que el UUID pertenezca al contexto enviado; la valoración de si sustentan bien cada afirmación corresponde a la evaluación humana.
@@ -251,11 +250,8 @@ Los tests usan dobles para los modelos pesados e incluyen regresiones del bucle 
 
 ## Documentación
 
-- `projectflux.md`: explicación exhaustiva del flujo, módulos, funciones, embeddings, persistencia y correcciones. Es documentación local y está incluida en `.gitignore`.
 - `docs/architecture.md`: arquitectura resumida.
 - `docs/usage.md`: guía operativa y resolución de problemas.
-- `docs/research_protocol.md`: protocolo de evaluación.
-- `docs/defense.md`: decisiones y límites metodológicos.
 
 ## Licencia
 

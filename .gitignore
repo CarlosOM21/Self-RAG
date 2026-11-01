@@ -54,6 +54,8 @@ build/
 
 # Lock files (generated)
 requirements.lock.txt
-docs/
+docs/defense.md
+docs/implementation_status.md
+docs/research_protocol.md
 # Documentación local detallada del proyecto
 projectflux.md
